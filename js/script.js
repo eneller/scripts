@@ -1,5 +1,6 @@
 //submit m3u8 URL button
 function submit(){
-        var m3u8URL = document.getElementById("enterm3u8").value;
-        alert(m3u8URL);
+        var textarea = document.getElementById("enterm3u8")
+        var text = textarea.value;
+        alert(text);
 
