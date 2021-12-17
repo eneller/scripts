@@ -5,7 +5,7 @@ A script to facilitate downloading videos saved as .m3u8 in general.
 [Please extract the URL to your .m3u8 file first:](findm3u8.mp4)
 1. Open the developer tools
 2. Go to the network tab and reload the page
-3. locate an entry containing an m3u8 link
+3. locate an entry containing an m3u8 link (search for chunklist)
 4. copy the link
 
 In pictures:
