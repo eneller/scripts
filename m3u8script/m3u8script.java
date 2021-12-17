@@ -85,6 +85,9 @@ public class m3u8script {
             if (outputPath.matches(".*/$")) {
                 String generatedFileName = splitWebPath[splitWebPath.length - 2];
                 generatedFileName = generatedFileName.replaceAll("%20", "_");
+                /* above line should be
+                                generatedFileName = java.net.URLDecoder.decode(generatedFileName, StandardCharsets.UTF_8);  
+                */
                 generatedFileName = generatedFileName.replaceAll("\\.smil", ".m3u8");
                 outputPath = outputPath + generatedFileName;
             }
