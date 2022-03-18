@@ -14,7 +14,6 @@ public class Main{
     public static int length = 6;
 
     public static void main(String[] args) throws IOException {
-    	System.out.println("test");
         String filepath = "https://www.mymuesli.com/";
 
 
