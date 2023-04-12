@@ -1,0 +1,8 @@
+# Point to this config using --config-location
+# Extract Audio
+-x 
+--audio-format=mp3 
+# Highest Audio Quality (10 is lowest)
+--audio-quality=0
+# set output names
+-o ~/Downloads/ytdl/%(playlist_title|misc)s/%(title)s.%(ext)s
