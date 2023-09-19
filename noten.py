@@ -1,12 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
-
-
-
 import pandas as pd
-import numpy as np
-import seaborn as sns
-import matplotlib.pyplot as plt
+
 target_lp = 90
 data = pd.read_csv('./noten.csv')
 
