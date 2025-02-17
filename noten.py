@@ -2,7 +2,7 @@
 # coding: utf-8
 import pandas as pd
 
-target_lp = 90
+target_lp = 74
 data = pd.read_csv('./noten.csv')
 
 #data.head(5)
@@ -21,6 +21,6 @@ for _ , row in data.iterrows():
         weight = target_lp - acc_lp
         acc_note = acc_note + weight * row['note']
         break
-acc_note = acc_note / target_lp
+acc_note = acc_note / acc_lp
 print(acc_note)
 
