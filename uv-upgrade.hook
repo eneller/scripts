@@ -1,0 +1,10 @@
+[Trigger]
+Operation = Upgrade
+Type = Package
+Target = *
+
+[Action]
+Description = Upgrade python programs installed as 'uv tool'
+When = PostTransaction
+Depends = python-uv
+Exec = /usr/bin/uv tool upgrade --all

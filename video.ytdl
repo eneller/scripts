@@ -1,0 +1,7 @@
+# Point to this config using --config-location
+# download playlist if ambiguous
+--yes-playlist
+-f "bestvideo[height=360]+bestaudio/best[height=360]"
+--merge-output-format mp4
+# set output names
+-o ~/Downloads/ytdl/%(playlist_title|misc)s/%(title)s.%(ext)s
